@@ -1,0 +1,6 @@
+% Control Parameters
+k_H = 0.015;
+k_HDot = 0.05;
+k_HDotDot = 0.01;
+
+k_HI = 0.02;

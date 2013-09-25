@@ -1,0 +1,16 @@
+function QuadHeight = GetQuadHeight()
+SubjectName = 'point_H’;
+MarkerName = 'Origin’;
+MarkerName = 'Y’;
+MarkerName = 'Y’;
+
+
+Output_GetMarkerGlobalTranslation = MyClient.GetMarkerGlobalTranslation( SubjectName, MarkerName );
+
+Quadrotor_Height = Output_GetMarkerGlobalTranslation.Translation( 3 )
+
+
+
+
+
+

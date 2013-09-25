@@ -1,0 +1,14 @@
+Based on your Matlab version, add path to the correct folder" "MATLAB_vicon_32bit" or "MATLAB_vicon_64bit"
+
+
+Set up MATLAB 64-bit for the first time to interface with Vicon Datastream SDK:
+
+i.   Install appropriate version of devstudio, e.g. Microsoft Visual Studio 2010 Professional.
+
+ii.  Run mbuild –setup (see http://www.mathworks.com/help/toolbox/compiler/f6-22535.html) to configure the right compiler 
+
+Note: professional compiler is typically required for 64 bit, but not 32 bit, as lcc-win32 (MATLAB compiler) is provided. Besides, LCC is not sufficient for mex operation. 
+
+iii. Run Matlab with your script using Client.m, provided in viconDataStreamSDKInstallerWin64.msi
+
+iv.  If necessary, run mex again (e.g. for MAVLINK_Interface.cpp, RealTimeSlower\sfun_time.c)
