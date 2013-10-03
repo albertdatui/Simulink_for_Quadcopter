@@ -28,16 +28,16 @@ ViconPose(6) = QuadEulerXYZ.Rotation(3); % Yaw
 % *********************************
 % Basket
 % *********************************
-% SubjectName = 'basket'; SegmentName = 'basket';
+% SubjectName = 'basket'; SegmentName = 'MB platform';
 
 % X, Y, Z Global Coordinates of the Quad
-Output_GetSegmentGlobalTranslation = MyClient.GetSegmentGlobalTranslation('basket', 'basket');
+Output_GetSegmentGlobalTranslation = MyClient.GetSegmentGlobalTranslation('MB platform', 'MB platform');
 ViconPose(7) = Output_GetSegmentGlobalTranslation.Translation(1);  % X-coordinate
 ViconPose(8) = Output_GetSegmentGlobalTranslation.Translation(2);  % Y-coordinate
 ViconPose(9) = Output_GetSegmentGlobalTranslation.Translation(3);  % Z-coordinate
 
 % Euler Angles
-QuadEulerXYZ = MyClient.GetSegmentGlobalRotationEulerXYZ('basket', 'basket');
+QuadEulerXYZ = MyClient.GetSegmentGlobalRotationEulerXYZ('MB platform', 'MB platform');
 ViconPose(10) = QuadEulerXYZ.Rotation(1); % Roll
 ViconPose(11) = QuadEulerXYZ.Rotation(2); % Pitch
 ViconPose(12) = QuadEulerXYZ.Rotation(3); % Yaw
