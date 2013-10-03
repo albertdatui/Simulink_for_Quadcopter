@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1445"
+    ComputedModelVersion    "1.1447"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,9 +31,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 03 13:00:05 2013"
-  RTWModifiedTimeStamp	  302699344
-  ModelVersionFormat	  "1.%<AutoIncrement:1445>"
+  LastModifiedDate	  "Thu Oct 03 16:39:37 2013"
+  RTWModifiedTimeStamp	  302719086
+  ModelVersionFormat	  "1.%<AutoIncrement:1447>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -949,8 +949,8 @@ Model {
   }
   System {
     Name		    "WK_MaoBi_Record"
-    Location		    [10, 82, 950, 994]
-    Open		    off
+    Location		    [2, 82, 942, 994]
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1492,14 +1492,14 @@ Model {
 	  Position		  [995, 679, 1025, 711]
 	  Floating		  off
 	  Location		  [969, 56, 1913, 1031]
-	  Open			  off
+	  Open			  on
 	  NumInputPorts		  "1"
 	  List {
 	    ListType		    AxesTitles
 	    axes1		    "%<SignalLabel>"
 	  }
-	  YMin			  "-1.1"
-	  YMax			  "0.5"
+	  YMin			  "-0.8"
+	  YMax			  "0"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
 	  SampleTime		  "0"
@@ -1633,7 +1633,7 @@ Model {
 	  System {
 	    Name		    "Trajectory Logic"
 	    Location		    [2, 82, 1902, 1027]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -8268,8 +8268,8 @@ Stateflow {
   }
   transition {
     id			    23
-    labelString		    "{PosDesired = Pos;  PosDesired[2] = -1;}"
-    labelPosition	    [406.832 42.905 168.919 12.598]
+    labelString		    "{PosDesired = Pos;  PosDesired[2] = -1.2;}"
+    labelPosition	    [406.832 42.905 176.63 12.598]
     fontSize		    9.327
     arrowSize		    12.592
     src {

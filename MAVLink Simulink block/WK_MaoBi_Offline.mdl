@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1425"
+    ComputedModelVersion    "1.1426"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,9 +31,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 03 13:31:30 2013"
+  LastModifiedDate	  "Thu Oct 03 16:44:52 2013"
   RTWModifiedTimeStamp	  302705934
-  ModelVersionFormat	  "1.%<AutoIncrement:1425>"
+  ModelVersionFormat	  "1.%<AutoIncrement:1426>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -972,7 +972,7 @@ Model {
   }
   System {
     Name		    "WK_MaoBi_Offline"
-    Location		    [970, 82, 1910, 994]
+    Location		    [10, 82, 950, 994]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1505,12 +1505,14 @@ Model {
 	  Position		  [1020, 719, 1050, 751]
 	  Floating		  off
 	  Location		  [969, 56, 1913, 1031]
-	  Open			  off
+	  Open			  on
 	  NumInputPorts		  "1"
 	  List {
 	    ListType		    AxesTitles
 	    axes1		    "%<SignalLabel>"
 	  }
+	  YMin			  "-0.4"
+	  YMax			  "0"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
 	  SampleTime		  "0"
@@ -1585,6 +1587,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "position des"
+	    PropagatedSignals	    "ComRef, ComRef"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -1598,14 +1601,14 @@ Model {
 	  Port {
 	    PortNumber		    3
 	    Name		    "velocity des"
-	    PropagatedSignals	    ", , "
+	    PropagatedSignals	    ", "
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "Acc des"
-	    PropagatedSignals	    ", , , "
+	    PropagatedSignals	    ", , "
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -8398,8 +8401,8 @@ Stateflow {
   chart {
     id			    9
     name		    "Planning/Trajectory Logic/UAV SF"
-    windowPosition	    [0 30 1440 723]
-    viewLimits		    [0 1268.448 0 624.005]
+    windowPosition	    [18.75 30 1440 723]
+    viewLimits		    [0 1268.022 0 623.796]
     zoomFactor		    0.908
     chartColor		    [1 1 1]
     screen		    [1 1 1920 1080 1.333333333333333]
@@ -8529,7 +8532,7 @@ Stateflow {
   transition {
     id			    18
     labelString		    "{HoverThrottle = 0;}"
-    labelPosition	    [26.876 549.711 72.175 11.558]
+    labelPosition	    [26.876 549.711 72.151 11.554]
     fontSize		    8
     src {
       intersection	      [0 0 0 0 20.5837 568.4057 0 0]
@@ -8550,7 +8553,7 @@ Stateflow {
   transition {
     id			    19
     labelString		    "[RC[6] < -0.5]"
-    labelPosition	    [608.088 430.44 84.431 16.998]
+    labelPosition	    [608.088 430.44 84.403 16.992]
     fontSize		    14
     src {
       id		      12
@@ -8577,7 +8580,7 @@ Stateflow {
   transition {
     id			    20
     labelString		    "[RC[6] > 0.5]"
-    labelPosition	    [348.67 467.512 79.665 16.998]
+    labelPosition	    [348.67 467.512 79.638 16.992]
     fontSize		    14
     src {
       id		      10
@@ -8594,15 +8597,13 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    9
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    17
   }
   transition {
     id			    21
     labelString		    "{PosDesired = Pos;  PosDesired[2] =-1.2;}"
-    labelPosition	    [224.247 41.812 168.863 12.238]
+    labelPosition	    [224.247 41.812 168.806 12.234]
     fontSize		    9.327
     arrowSize		    12.592
     src {
@@ -8627,7 +8628,7 @@ Stateflow {
   }
   transition {
     id			    22
-    labelPosition	    [204.991 518.537 6.128 11.558]
+    labelPosition	    [204.991 518.537 6.126 11.554]
     fontSize		    7.84
     arrowSize		    7.053
     src {
@@ -8652,7 +8653,7 @@ Stateflow {
   transition {
     id			    23
     labelString		    "[Pos[2] > (PerchPos[2]-0.1)]"
-    labelPosition	    [704.844 519.381 103.497 11.558]
+    labelPosition	    [704.844 519.381 103.462 11.554]
     fontSize		    7.84
     arrowSize		    7.053
     src {
@@ -8680,7 +8681,7 @@ Stateflow {
   transition {
     id			    24
     labelString		    "[RC[5] > 0]"
-    labelPosition	    [205.308 302.77 60.6 15.638]
+    labelPosition	    [205.308 302.77 60.58 15.632]
     fontSize		    12
     arrowSize		    12.592
     src {
@@ -8698,8 +8699,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    9
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    187
   }
