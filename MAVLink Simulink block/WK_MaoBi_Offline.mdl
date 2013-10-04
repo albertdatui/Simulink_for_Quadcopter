@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1443"
+    ComputedModelVersion    "1.1451"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -24,16 +24,16 @@ Model {
   " 1.6;%for Horizontal reference\nZeta_r = 0.7; %for Horizontal reference\nOmega = 1.8;%for Horizontal Control\nZeta ="
   " 0.5;    %for Horizontal Control\n\nOmega_h_r = 2.5; %for vertical reference\nZeta_h_r = 0.8;  %for vertical referen"
   "ce\nOmega_h = 2.7;    %for vertical control\nZeta_h = 0.8;         %for vertical control\nPI=pi;\n\nMass = 1.1;\nAcc"
-  "_Max = 4;\nAcc_Max_h = 4;\n\nMax_RP = 60;\n\nload MaoBi_Oct03_2.mat\nMB_Interp.time = [];"
+  "_Max = 4;\nAcc_Max_h = 4;\n\nMax_RP = 60;\n\nload MaoBi_Oct04_2_int.mat\nMB_Interp.time = [];"
   Created		  "Thu Nov 24 10:40:23 2011"
   Creator		  "ttcl3"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 03 19:11:59 2013"
-  RTWModifiedTimeStamp	  302728273
-  ModelVersionFormat	  "1.%<AutoIncrement:1443>"
+  LastModifiedDate	  "Fri Oct 04 15:02:56 2013"
+  RTWModifiedTimeStamp	  302784487
+  ModelVersionFormat	  "1.%<AutoIncrement:1451>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -953,6 +953,15 @@ Model {
       BlockType		      Terminator
     }
     Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
+    Block {
       BlockType		      TriggerPort
       TriggerType	      "rising"
       StatesWhenEnabling      "inherit"
@@ -973,7 +982,7 @@ Model {
   System {
     Name		    "WK_MaoBi_Offline"
     Location		    [2, 82, 942, 994]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -986,7 +995,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2023"
+    SIDHighWatermark	    "2024"
     Block {
       BlockType		      From
       Name		      "From"
@@ -1047,7 +1056,7 @@ Model {
       Name		      "Planning"
       SID		      "1084"
       Ports		      [4, 2]
-      Position		      [225, 111, 330, 454]
+      Position		      [255, 131, 360, 474]
       BackgroundColor	      "darkGreen"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -1059,7 +1068,7 @@ Model {
       System {
 	Name			"Planning"
 	Location		[2, 82, 1902, 1027]
-	Open			off
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1521,8 +1530,9 @@ Model {
 	    ListType		    AxesTitles
 	    axes1		    "%<SignalLabel>"
 	  }
-	  YMin			  "-0.55"
-	  YMax			  "0.15"
+	  TimeRange		  "10"
+	  YMin			  "-0.6"
+	  YMax			  "0.9"
 	  SaveName		  "ScopeData2"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
@@ -1535,14 +1545,14 @@ Model {
 	  Ports			  [1]
 	  Position		  [1020, 719, 1050, 751]
 	  Floating		  off
-	  Location		  [969, 56, 1913, 1031]
+	  Location		  [1, 48, 1921, 1039]
 	  Open			  on
 	  NumInputPorts		  "1"
 	  List {
 	    ListType		    AxesTitles
 	    axes1		    "%<SignalLabel>"
 	  }
-	  YMin			  "-0.6"
+	  YMin			  "-0.7"
 	  YMax			  "0.9"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
@@ -1615,6 +1625,17 @@ Model {
 	  OutputSizes		  "1"
 	}
 	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  SID			  "2024"
+	  Ports			  [1]
+	  Position		  [925, 630, 985, 660]
+	  VariableName		  "MB_realtime"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Structure"
+	}
+	Block {
 	  BlockType		  SubSystem
 	  Name			  "Trajectory Logic"
 	  SID			  "573"
@@ -1665,7 +1686,7 @@ Model {
 	  }
 	  System {
 	    Name		    "Trajectory Logic"
-	    Location		    [34, 85, 974, 1014]
+	    Location		    [2, 82, 942, 1011]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3387,9 +3408,16 @@ Model {
 	    }
 	  }
 	  Branch {
-	    Points		    [0, 490]
-	    DstBlock		    "Bus\nSelector3"
-	    DstPort		    1
+	    Points		    [0, 490; 35, 0]
+	    Branch {
+	      DstBlock		      "Bus\nSelector3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -90]
+	      DstBlock		      "To Workspace"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Line {
@@ -8251,13 +8279,14 @@ Model {
     Line {
       SrcBlock		      "From"
       SrcPort		      1
+      Points		      [180, 0]
       DstBlock		      "Planning"
       DstPort		      4
     }
     Line {
       SrcBlock		      "Planning"
       SrcPort		      1
-      Points		      [10, 0; 0, 35]
+      Points		      [-20, 0; 0, 15]
       DstBlock		      "MAVLink Serial"
       DstPort		      1
     }
@@ -8300,14 +8329,14 @@ Model {
     Line {
       SrcBlock		      "Rate Transition"
       SrcPort		      1
-      Points		      [55, 0]
+      Points		      [85, 0]
       DstBlock		      "Planning"
       DstPort		      1
     }
     Line {
       SrcBlock		      "Rate Transition1"
       SrcPort		      1
-      Points		      [55, 0]
+      Points		      [85, 0]
       DstBlock		      "Planning"
       DstPort		      2
     }
@@ -8320,7 +8349,7 @@ Model {
     Line {
       SrcBlock		      "Rate Transition2"
       SrcPort		      1
-      Points		      [25, 0; 0, 10]
+      Points		      [25, 0; 0, 30]
       DstBlock		      "Planning"
       DstPort		      3
     }
@@ -8500,7 +8529,7 @@ Stateflow {
     subviewS {
       zoomFactor	      0.908
     }
-    ssIdHighWaterMark	    231
+    ssIdHighWaterMark	    232
     decomposition	    CLUSTER_CHART
     firstData		    35
     chartFileNumber	    3
