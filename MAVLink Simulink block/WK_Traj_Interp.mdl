@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.19"
+    ComputedModelVersion    "1.22"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -28,9 +28,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 10 13:44:30 2013"
-  RTWModifiedTimeStamp	  303313403
-  ModelVersionFormat	  "1.%<AutoIncrement:19>"
+  LastModifiedDate	  "Fri Oct 11 17:31:30 2013"
+  RTWModifiedTimeStamp	  303411519
+  ModelVersionFormat	  "1.%<AutoIncrement:22>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -67,6 +67,7 @@ Model {
     $ObjectID		    1
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "WK_Traj_Interp"
+    signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
@@ -132,7 +133,7 @@ Model {
 	  $ObjectID		  3
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "62.92"
+	  StopTime		  "70.4"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"

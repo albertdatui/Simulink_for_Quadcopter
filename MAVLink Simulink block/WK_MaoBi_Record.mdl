@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1447"
+    ComputedModelVersion    "1.1449"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,9 +31,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 03 16:39:37 2013"
-  RTWModifiedTimeStamp	  302719086
-  ModelVersionFormat	  "1.%<AutoIncrement:1447>"
+  LastModifiedDate	  "Fri Oct 11 15:08:06 2013"
+  RTWModifiedTimeStamp	  303404879
+  ModelVersionFormat	  "1.%<AutoIncrement:1449>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -950,7 +950,7 @@ Model {
   System {
     Name		    "WK_MaoBi_Record"
     Location		    [2, 82, 942, 994]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1212,7 +1212,7 @@ Model {
 	  BackgroundColor	  "green"
 	  LibraryVersion	  "1.38"
 	  SourceBlock		  "X330_Control/Horizontal Pos controller"
-	  SourceType		  ""
+	  SourceType		  "Unknown"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
 	  FunctionWithSeparateData off
@@ -1722,7 +1722,7 @@ Model {
 	      BackgroundColor	      "orange"
 	      LibraryVersion	      "1.38"
 	      SourceBlock	      "X330_Control/PosRefSystem"
-	      SourceType	      ""
+	      SourceType	      "Unknown"
 	      ShowPortLabels	      "FromPortIcon"
 	      SystemSampleTime	      "-1"
 	      FunctionWithSeparateData off
@@ -2164,7 +2164,7 @@ Model {
 	  BackgroundColor	  "darkGreen"
 	  LibraryVersion	  "1.41"
 	  SourceBlock		  "X400_Control/Vertical Controller"
-	  SourceType		  ""
+	  SourceType		  "Unknown"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
 	  FunctionWithSeparateData off
@@ -4672,7 +4672,7 @@ Model {
 	  System {
 	    Name		    "Raw Quad Pose from Vicon"
 	    Location		    [608, 82, 1851, 739]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "[0.800000, 0.909804, 0.811765]"
