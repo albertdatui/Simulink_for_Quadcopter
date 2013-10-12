@@ -15,9 +15,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Vicon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Sep 18 17:28:39 2013"
-  RTWModifiedTimeStamp	  301426114
-  ModelVersionFormat	  "1.%<AutoIncrement:38>"
+  LastModifiedDate	  "Sat Oct 12 16:21:48 2013"
+  RTWModifiedTimeStamp	  303495636
+  ModelVersionFormat	  "1.%<AutoIncrement:39>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1364,7 +1364,7 @@ Library {
 	      ShowName		      off
 	      InputPortWidth	      "8"
 	      IndexOptions	      "Index vector (dialog)"
-	      Indices		      "[7]"
+	      Indices		      "[5]"
 	      OutputSizes	      "1"
 	      Port {
 		PortNumber		1
@@ -2740,7 +2740,7 @@ Library {
       System {
 	Name			"Vertical Controller"
 	Location		[970, 82, 1910, 1011]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2910,7 +2910,7 @@ Library {
 	  ShowName		  off
 	  InputPortWidth	  "8"
 	  IndexOptions		  "Index vector (dialog)"
-	  Indices		  "[7]"
+	  Indices		  "[5]"
 	  OutputSizes		  "1"
 	  Port {
 	    PortNumber		    1
